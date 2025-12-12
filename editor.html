@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Code Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="editor-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">{ }</span>
+                <span class="logo-text">ProCode</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="editor.html" class="active">Editor</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="toolbar">
+        <div class="toolbar-group">
+            <div class="control-item">
+                <span class="label">Language</span>
+                <select id="languageSelector">
+                    <option value="javascript">JavaScript</option>
+                    <option value="cpp">C++</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="csharp">C#</option>
+                    <option value="go">Go</option>
+                    <option value="typescript">TypeScript</option>
+                </select>
+            </div>
+
+            <div class="control-item">
+                <span class="label">Font Type</span>
+                <select id="fontFamilySelector">
+                    <option value="'Fira Code', monospace">Fira Code</option>
+                    <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
+                    <option value="'Ubuntu Mono', monospace">Ubuntu Mono</option>
+                    <option value="'Consolas', 'Courier New', monospace">Consolas (Default)</option>
+                </select>
+            </div>
+
+            <div class="control-item">
+                <span class="label">Font Size</span>
+                <select id="fontSizeSelector">
+                    <option value="12">12px</option>
+                    <option value="14" selected>14px</option>
+                    <option value="16">16px</option>
+                    <option value="18">18px</option>
+                    <option value="20">20px</option>
+                    <option value="24">24px</option>
+                    <option value="30">30px</option>
+                </select>
+            </div>
+
+            <div class="control-item">
+                <span class="label">Theme</span>
+                <select id="themeSelector">
+                    <option value="vs-dark">Dark</option>
+                    <option value="vs">Light</option>
+                    <option value="hc-black">High Contrast</option>
+                </select>
+            </div>
+        </div>
+        
+        <button id="runBtn" class="btn-run">
+            <span>&#9658;</span> Run
+        </button>
+    </div>
+
+    <div class="workspace">
+        <div id="editor-container"></div>
+
+        <div class="io-container">
+            <div class="io-box">
+                <div class="io-header">
+                    <span class="io-label">INPUT</span>
+                    <span style="font-size: 11px; color: #666;">Provide input here BEFORE running</span>
+                </div>
+                <textarea id="inputArea" class="io-textarea" placeholder="e.g. 10 20"></textarea>
+            </div>
+            <div class="io-box">
+                <div class="io-header">
+                    <span class="io-label" style="color: #4ec9b0;">OUTPUT</span>
+                </div>
+                <textarea id="outputArea" class="io-textarea" readonly placeholder="Output will appear here..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>

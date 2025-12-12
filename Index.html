@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Code Editor - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">{ }</span>
+                <span class="logo-text">ProCode</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="editor.html">Editor</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Write Code.<br>Run Instantly.<br>Learn Faster.</h1>
+            <p class="hero-subtitle">A professional-grade code editor in your browser. Support for 7+ languages with real-time execution.</p>
+            <div class="cta-buttons">
+                <a href="editor.html" class="btn btn-primary">Start Coding</a>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="window-title">main.js</span>
+                </div>
+                <div class="window-content">
+                    <pre><code><span class="keyword">function</span> <span class="function">fibonacci</span>(<span class="param">n</span>) {
+  <span class="keyword">if</span> (n <= <span class="number">1</span>) <span class="keyword">return</span> n;
+  <span class="keyword">return</span> <span class="function">fibonacci</span>(n - <span class="number">1</span>) + <span class="function">fibonacci</span>(n - <span class="number">2</span>);
+}
+
+<span class="variable">console</span>.<span class="function">log</span>(<span class="function">fibonacci</span>(<span class="number">10</span>)); <span class="comment">// 55</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">Powerful Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Instant code execution with Monaco Editor powering your development experience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>7+ Languages</h3>
+                <p>JavaScript, Python, C++, Java, C#, Go, and TypeScript support out of the box.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Customizable</h3>
+                <p>Multiple themes, fonts, and sizes. Make the editor truly yours.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Smart Suggestions</h3>
+                <p>IntelliSense-powered code completion and parameter hints as you type.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📥</div>
+                <h3>Input/Output</h3>
+                <p>Built-in input and output panels for testing interactive programs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Browser-Based</h3>
+                <p>No installation required. Code anywhere, anytime, on any device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="languages">
+        <h2 class="section-title">Supported Languages</h2>
+        <div class="languages-grid">
+            <div class="lang-card">
+                <div class="lang-name">JavaScript</div>
+                <div class="lang-version">v18.15.0</div>
+            </div>
+            <div class="lang-card">
+                <div class="lang-name">Python</div>
+                <div class="lang-version">v3.10.0</div>
+            </div>
+            <div class="lang-card">
+                <div class="lang-name">C++</div>
+                <div class="lang-version">v10.2.0</div>
+            </div>
+            <div class="lang-card">
+                <div class="lang-name">Java</div>
+                <div class="lang-version">v15.0.2</div>
+            </div>
+            <div class="lang-card">
+                <div class="lang-name">C#</div>
+                <div class="lang-version">v6.12.0</div>
+            </div>
+            <div class="lang-card">
+                <div class="lang-name">Go</div>
+                <div class="lang-version">v1.16.2</div>
+            </div>
+            <div class="lang-card">
+                <div class="lang-name">TypeScript</div>
+                <div class="lang-version">v5.0.3</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 ProCode Editor. Built with Monaco Editor.</p>
+    </footer>
+</body>
+</html>

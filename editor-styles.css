@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    font-family: 'Segoe UI', sans-serif;
+    color: #d4d4d4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 122, 204, 0.3);
+    flex-shrink: 0;
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    color: #007acc;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-text {
+    background: linear-gradient(135deg, #007acc, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #d4d4d4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #007acc;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007acc;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: #252526;
+    border-bottom: 1px solid #3e3e3e;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.label {
+    font-size: 10px;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+select {
+    padding: 4px 6px;
+    border-radius: 3px;
+    border: 1px solid #3e3e3e;
+    background-color: #3c3c3c;
+    color: #ccccc7;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    min-width: 100px;
+}
+
+select:hover {
+    background-color: #444;
+}
+
+.btn-run {
+    padding: 8px 24px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-run:hover {
+    background-color: #0062a3;
+}
+
+/* Main Workspace */
+.workspace {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: calc(100vh - 120px);
+}
+
+#editor-container {
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* INPUT / OUTPUT SECTION */
+.io-container {
+    height: 220px;
+    background-color: #1e1e1e;
+    border-top: 2px solid #007acc;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.io-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #3e3e3e;
+    min-width: 0;
+}
+
+.io-box:last-child {
+    border-right: none;
+}
+
+.io-header {
+    padding: 8px 15px;
+    background-color: #252526;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ccc;
+    border-bottom: 1px solid #3e3e3e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.io-label {
+    color: #9cdcfe;
+}
+
+.io-textarea {
+    flex-grow: 1;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border: none;
+    padding: 15px;
+    resize: none;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 14px;
+    outline: none;
+    line-height: 1.5;
+}
+
+.io-textarea:focus {
+    background-color: #262626;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #424242;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .toolbar {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .toolbar-group {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .control-item {
+        min-width: 150px;
+    }
+
+    .io-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .io-box {
+        border-right: none;
+        border-bottom: 1px solid #3e3e3e;
+        min-height: 150px;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
